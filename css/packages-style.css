@@ -1,0 +1,397 @@
+/***** Global *****/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --gray-color: #707579;
+    --white-color: #fff;
+    --linkden-color: #0077b5;
+    --googlePlus-color: #dd4b39;
+    --twitter-color: #1da1f2;
+    --facebook-color: #3b5998;
+    --blue-color: #047ffc;
+}
+
+/* Start Header Section Styling */
+.header{
+    background: url(../imgs/banner1.jpg) center  no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+
+.header::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+/* Navbar */
+.header .main-navbar{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3) ;
+}
+
+.navbar-toggler{
+    border-radius: 0;
+    background-color: var(--blue-color);
+    outline: none;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    width: 20px;
+    height: 20px;
+    color: var(--white-color);
+}
+
+.navbar-toggler,
+.navbar-toggler-icon{ outline: none;}
+
+.header .navbar .navbar-brand{
+    font-size: 30px;
+    color: var(--white-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav .nav-item{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.8;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover{ opacity: 1;}
+
+.navbar-nav .nav-item button{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 0 25px;
+    border: none;
+}
+
+.navbar-nav .nav-item button .nav-link{
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+/* Media Query For Navbar */
+@media(max-width:991px){
+    .navbar-collapse {
+        background-color: var(--white-color);
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item{
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:last-child{ padding-bottom: 25px;}
+    
+    .navbar-collapse .navbar-nav .nav-link{color: #000;}
+
+    .navbar-collapse .navbar-nav button .nav-link {color: var(--white-color);}
+
+    .navbar-nav .nav-item .nav-link.active{ 
+        opacity: 1;
+        color: var(--blue-color);
+    }
+}
+/* End Media Query */
+
+/* End Navbar */
+
+/* End Header Section Styling */
+
+/* Start Packages Section Styling */
+.packages{padding: 100px 0;}
+
+.packages h2.h1{color: #000;}
+
+.packages .tour-package .tour-img img{width: 100%;}
+
+.tour-img .price{
+    bottom: 2px;
+    right: 2px;
+}
+
+.packages .package-details{
+    background-color: var(--white-color);
+    box-shadow: 0 1px 8px 1px #ddd;
+}
+
+.packages .package-details i{color: var(--blue-color);}
+
+.packages .package-details span.city{
+    color: var(--gray-color);
+    font-size: 18px;
+}
+
+.packages .package-details h5{
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.packages .package-details .lead{
+    width: 100%;
+    font-size: 14px;
+}
+
+.packages .package-details span.duration{color: var(--gray-color);}
+
+.packages .package-details span.duration span{ font-weight: 900;}
+
+.packages .packages-page button{
+    padding: 10px 25px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+}
+/* End Packages Section Styling */
+
+/* Start Popular Desti Section Styling */
+.popular-desti{ 
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.popular-desti .tour-desti .tour-country{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.tour-desti .tour-img img{width: 100%;}
+
+.tour-desti .tour-img .rate{
+    top: 2px;
+    right: 2px;
+}
+
+.tour-desti .desti-pop-up{
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: none;
+}
+
+.popular-desti .tour-desti:hover .desti-pop-up{
+    display: block;
+    animation: fade_in_show 0.5s
+}
+
+@keyframes fade_in_show{
+    0% {
+        opacity: 0;
+        transform: scale(0)
+   }
+
+   100% {
+        opacity: 1;
+        transform: scale(1)
+   }
+}
+
+.tour-desti .desti-pop-up h4{
+    color: var(--white-color);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.tour-desti .desti-pop-up .book-trip button{
+    background: none;
+    border: 1px solid var(--white-color);
+    padding: 8px 15px;
+    color: var(--white-color);
+    font-size: 18px;
+    letter-spacing: 1px;
+    outline: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.tour-desti .desti-pop-up .book-trip button:hover{
+    background-color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+}
+/* End Popular Desti Section Styling */
+
+/* Start Footer Styling */
+.footer{
+    padding: 100px 0;
+    background-color: #151515;
+}
+
+.footer .footer-sec-heading{
+    font-size: 25px;
+    color: var(--white-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    color: var(--gray-color);
+    font-size: 16px;
+}
+
+.footer p.location{line-height: 1.8;}
+
+.footer .about-footer .social-media li{
+    display: inline;
+    margin-right: 5px;
+}
+
+.footer .about-footer .social-media li i{
+    color: var(--white-color);
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.footer .about-footer .social-media li:first-of-type i{background-color: var(--facebook-color);}
+
+.footer .about-footer .social-media li:nth-of-type(2) i{background-color: var(--twitter-color);}
+
+.footer .about-footer .social-media li:nth-of-type(3) i{background-color: var(--googlePlus-color);}
+
+.footer .about-footer .social-media li:last-of-type i{background-color: var(--linkden-color);}
+
+.footer .travel-places li{margin-bottom: 10px;}
+
+.footer .travel-places a{
+    text-decoration: none;
+    color: var(--gray-color);
+}
+
+.footer .news-letter form{
+    width: 100%;
+    border: 1px solid var(--gray-color);
+}
+
+.footer .news-letter input{
+    background: none;
+    border: none;
+    color: var(--white-color);
+    padding: 8px 20px;
+    border-radius: 0;
+    outline: none;
+    width: 85%;
+}
+
+.footer .news-letter input:focus{
+    box-shadow: none;
+    border: none;
+}
+
+.footer .news-letter button{
+    color: var(--gray-color);
+    padding: 10px;
+    background: none;
+    border: none;
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+/* End Footer Styling */
+
+/* Copy Right Styling */
+.copy-right{
+    background-color: #222;
+    color: var(--gray-color);
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 20px;
+    position: relative;
+}
+
+.copy-right span{
+    color: var(--blue-color);
+    font-weight: bold;
+}
+
+/* Scroll Top Styling */
+.scroll-to-top{
+    display: inline-block;
+    position: absolute;
+    bottom: 15%;
+    right: 2%;
+}
+
+.scroll-to-top span{text-align: center;}
+
+.scroll-to-top span i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.scroll-to-top i{color: var(--white-color);}
+
+/* Start Grouping */
+.packages .lead,
+.popular-desti .lead{
+    line-height: 1.8;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: var(--gray-color);
+    width: 70%;
+    margin: auto;
+}
+
+.packages h2.h1,
+.popular-desti h2.h1{
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tour-img .price,
+.tour-img .rate{
+    position: absolute;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 8px 10px;
+}
+
+/* End Grouping */
+
+/* Start Global Media Query */
+@media(max-width:576px){
+    .packages h2.h1,
+    .popular-desti h2.h1{font-size: 28px;}
+}
+/* End Global Media Query */

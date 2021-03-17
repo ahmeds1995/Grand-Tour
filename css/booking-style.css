@@ -1,0 +1,315 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --gray-color: #707579;
+    --white-color: #fff;
+    --linkden-color: #0077b5;
+    --googlePlus-color: #dd4b39;
+    --twitter-color: #1da1f2;
+    --facebook-color: #3b5998;
+    --blue-color: #047ffc;
+}
+
+/* Start Header Section Styling */
+.header{
+    background: url(../imgs/banner1.jpg) center  no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+
+.header::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+/* Navbar */
+.header .main-navbar{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3) ;
+}
+
+.navbar-toggler{
+    border-radius: 0;
+    background-color: var(--blue-color);
+    outline: none;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    width: 20px;
+    height: 20px;
+    color: var(--white-color);
+}
+
+.navbar-toggler,
+.navbar-toggler-icon{ outline: none;}
+
+.header .navbar .navbar-brand{
+    font-size: 30px;
+    color: var(--white-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav .nav-item{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.8;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover{ opacity: 1;}
+
+.navbar-nav .nav-item button{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 0 25px;
+    border: none;
+}
+
+.navbar-nav .nav-item button .nav-link{
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+/* Media Query For Navbar */
+@media(max-width:991px){
+    .navbar-collapse {
+        background-color: var(--white-color);
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item{
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:last-child{ padding-bottom: 25px;}
+    
+    .navbar-collapse .navbar-nav .nav-link{color: #000;}
+
+    .navbar-collapse .navbar-nav button .nav-link {color: var(--white-color);}
+
+    .navbar-nav .nav-item .nav-link.active{ 
+        opacity: 1;
+        color: var(--blue-color);
+    }
+}
+/* End Media Query */
+
+/* End Navbar */
+
+/* Start Book Tour Section Styling */
+.book-tour{padding: 100px 0;}
+
+.book-tour h2.h1{
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.book-tour .booking-form{
+    background-color: var(--white-color);
+    padding: 50px;
+    box-shadow: 0 2px 20px #eee;
+}
+
+.book-tour .booking-form input,
+.book-tour .booking-form select,
+.book-tour .booking-form textarea{
+    border-radius: 0;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 25px;
+    outline: none;
+}
+
+.book-tour .booking-form input:focus,
+.book-tour .booking-form select:focus,
+.book-tour .booking-form textarea:focus{
+    background-color: var(--white-color);
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.book-tour .booking-form .booking-btn{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.book-tour .booking-form select,
+.book-tour .booking-form textarea,
+.book-tour .booking-form .booking-btn{ width: 100%;}
+
+.book-tour .tour-description .price{
+    position: absolute;
+    right: 1%;
+    bottom: 6%;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 5px 10px;
+}
+/*.book-tour .tour-description .price{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}*/
+
+.book-tour .tour-description h3{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.book-tour .tour-description p.lead{
+    color: var(--gray-color);
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+/* End Book Tour Section Styling */
+
+/* Start Footer Styling */
+.footer{
+    padding: 100px 0;
+    background-color: #151515;
+}
+
+.footer .footer-sec-heading{
+    font-size: 25px;
+    color: var(--white-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    color: var(--gray-color);
+    font-size: 16px;
+}
+
+.footer p.location{line-height: 1.8;}
+
+.footer .about-footer .social-media li{
+    display: inline;
+    margin-right: 5px;
+}
+
+.footer .about-footer .social-media li i{
+    color: var(--white-color);
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.footer .about-footer .social-media li:first-of-type i{background-color: var(--facebook-color);}
+
+.footer .about-footer .social-media li:nth-of-type(2) i{background-color: var(--twitter-color);}
+
+.footer .about-footer .social-media li:nth-of-type(3) i{background-color: var(--googlePlus-color);}
+
+.footer .about-footer .social-media li:last-of-type i{background-color: var(--linkden-color);}
+
+.footer .travel-places li{margin-bottom: 10px;}
+
+.footer .travel-places a{
+    text-decoration: none;
+    color: var(--gray-color);
+}
+
+.footer .news-letter form{
+    width: 100%;
+    border: 1px solid var(--gray-color);
+}
+
+.footer .news-letter input{
+    background: none;
+    border: none;
+    color: var(--white-color);
+    padding: 8px 20px;
+    border-radius: 0;
+    outline: none;
+    width: 85%;
+}
+
+.footer .news-letter input:focus{
+    box-shadow: none;
+    border: none;
+}
+
+.footer .news-letter button{
+    color: var(--gray-color);
+    padding: 10px;
+    background: none;
+    border: none;
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+/* End Footer Styling */
+
+/* Copy Right Styling */
+.copy-right{
+    background-color: #222;
+    color: var(--gray-color);
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 20px;
+    position: relative;
+}
+
+.copy-right span{
+    color: var(--blue-color);
+    font-weight: bold;
+}
+
+/* Scroll Top Styling */
+.scroll-to-top{
+    display: inline-block;
+    position: absolute;
+    bottom: 15%;
+    right: 2%;
+}
+
+.scroll-to-top span{text-align: center;}
+
+.scroll-to-top span i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.scroll-to-top i{color: var(--white-color);}
